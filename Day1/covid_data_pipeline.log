@@ -1,0 +1,52 @@
+2025-06-06 16:07:22,486 - INFO - Starting COVID data pipeline
+2025-06-06 16:07:22,486 - INFO - Fetching data from API for India, last 30 days
+2025-06-06 16:07:23,758 - INFO - Successfully fetched and structured the data
+2025-06-06 16:07:23,763 - INFO - Data saved to CSV: covid_data.csv
+2025-06-06 16:07:23,844 - INFO - Data saved to MySQL table: covid_data
+2025-06-06 16:07:23,844 - INFO - Performing aggregations
+2025-06-06 16:07:23,848 - INFO - Total Cases: 5765
+2025-06-06 16:07:23,848 - INFO - Total Deaths: 31
+2025-06-06 16:07:23,848 - INFO - Total Recovered: 0
+2025-06-06 16:07:23,848 - INFO - Avg Daily Cases: 198.79310344827587
+2025-06-06 16:07:23,849 - INFO - Max Daily Cases: 1357.0
+2025-06-06 16:07:23,849 - INFO - Min Daily Cases: -1225.0
+2025-06-06 16:07:23,852 - INFO - COVID data pipeline completed successfully
+2025-06-06 16:07:48,413 - INFO - Starting COVID data pipeline
+2025-06-06 16:07:48,414 - INFO - Fetching data from API for India, last 30 days
+2025-06-06 16:07:49,866 - INFO - Successfully fetched and structured the data
+2025-06-06 16:07:49,870 - INFO - Data saved to CSV: covid_data.csv
+2025-06-06 16:07:49,964 - INFO - Data saved to MySQL table: covid_data
+2025-06-06 16:07:49,964 - INFO - Performing aggregations
+2025-06-06 16:07:49,965 - INFO - Total Cases: 5765
+2025-06-06 16:07:49,966 - INFO - Total Deaths: 31
+2025-06-06 16:07:49,966 - INFO - Total Recovered: 0
+2025-06-06 16:07:49,966 - INFO - Avg Daily Cases: 198.79310344827587
+2025-06-06 16:07:49,966 - INFO - Max Daily Cases: 1357.0
+2025-06-06 16:07:49,966 - INFO - Min Daily Cases: -1225.0
+2025-06-06 16:07:49,968 - INFO - COVID data pipeline completed successfully
+2025-06-06 16:10:00,691 - INFO - Starting COVID data pipeline
+2025-06-06 16:10:00,691 - INFO - Fetching data from API for India, last 30 days
+2025-06-06 16:10:01,983 - INFO - Successfully fetched and structured the data
+2025-06-06 16:10:01,988 - INFO - Data saved to CSV: covid_data.csv
+2025-06-06 16:10:02,079 - INFO - Data saved to MySQL table: covid_data
+2025-06-06 16:10:02,080 - INFO - Performing aggregations
+2025-06-06 16:10:02,080 - INFO - Total Cases: 5765
+2025-06-06 16:10:02,080 - INFO - Total Deaths: 31
+2025-06-06 16:10:02,080 - INFO - Total Recovered: 0
+2025-06-06 16:10:02,080 - INFO - Avg Daily Cases: 198.79310344827587
+2025-06-06 16:10:02,080 - INFO - Max Daily Cases: 1357.0
+2025-06-06 16:10:02,080 - INFO - Min Daily Cases: -1225.0
+2025-06-06 16:10:02,083 - INFO - COVID data pipeline completed successfully
+2025-06-06 16:10:32,593 - INFO - Starting COVID data pipeline
+2025-06-06 16:10:32,593 - INFO - Fetching data from API for India, last 100 days
+2025-06-06 16:10:33,967 - INFO - Successfully fetched and structured the data
+2025-06-06 16:10:33,972 - INFO - Data saved to CSV: covid_data.csv
+2025-06-06 16:10:34,093 - INFO - Data saved to MySQL table: covid_data
+2025-06-06 16:10:34,093 - INFO - Performing aggregations
+2025-06-06 16:10:34,093 - INFO - Total Cases: 16875
+2025-06-06 16:10:34,093 - INFO - Total Deaths: 157
+2025-06-06 16:10:34,093 - INFO - Total Recovered: 0
+2025-06-06 16:10:34,093 - INFO - Avg Daily Cases: 170.45454545454547
+2025-06-06 16:10:34,093 - INFO - Max Daily Cases: 1357.0
+2025-06-06 16:10:34,093 - INFO - Min Daily Cases: -1225.0
+2025-06-06 16:10:34,096 - INFO - COVID data pipeline completed successfully
