@@ -42,3 +42,8 @@ for row in rows:
 
 cursor.close()
 connection.close()
+
+
+
+
+
