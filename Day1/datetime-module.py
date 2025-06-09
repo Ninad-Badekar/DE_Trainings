@@ -1,14 +1,11 @@
 from datetime import datetime, date, time, timedelta
 
-# 1. Current local datetime using now()
 now = datetime.now()
 print("Current local datetime (now):", now)
 
-# 2. Current local datetime using today()
 today = datetime.today()
 print("Current local datetime (today):", today)
 
-# 3. Convert string to datetime (strptime)
 date_str = "2025-06-06"
 dt_from_str = datetime.strptime(date_str, "%Y-%m-%d")
 print("Datetime from string:", dt_from_str)
