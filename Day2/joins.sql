@@ -49,7 +49,7 @@ LEFT JOIN employees e
   ON d.department_id = e.department_id
 WHERE e.employee_id IS NULL;
 
-#q7 Prompt: Identify all locations that are not referenced by any department
+#q7 Identify all locations that are not referenced by any department
 # (i.e., locations with no departments at that site). Write this using NOT EXISTS subquery .
 SELECT l.location_id, l.city
 FROM locations l

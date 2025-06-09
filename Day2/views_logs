@@ -1,0 +1,26 @@
+2025-06-09 15:26:46,658 - INFO - connected successfully
+2025-06-09 15:26:46,658 - INFO - 
+--- Create_View ---
+2025-06-09 15:26:46,666 - INFO - 
+--- Select_View ---
+2025-06-09 15:26:46,669 - INFO - (100, 'Steven', 'King', 'steven.king@sqltutorial.org', '515.123.4567', datetime.date(1987, 6, 17), 4, Decimal('24000.00'), None, 9)
+2025-06-09 15:26:46,669 - INFO - 
+--- Replace_View ---
+2025-06-09 15:26:46,674 - INFO - 
+--- Changed_View ---
+2025-06-09 15:26:46,675 - INFO - (101, 'Neena', 'Kochhar', 'neena.kochhar@sqltutorial.org', '515.123.4568', datetime.date(1989, 9, 21), 5, Decimal('17000.00'), 100, 9)
+2025-06-09 15:26:46,676 - INFO - (102, 'Lex', 'De Haan', 'lex.de haan@sqltutorial.org', '515.123.4569', datetime.date(1993, 1, 13), 5, Decimal('17000.00'), 100, 9)
+2025-06-09 15:26:46,676 - INFO - (114, 'Den', 'Raphaely', 'den.raphaely@sqltutorial.org', '515.127.4561', datetime.date(1994, 12, 7), 14, Decimal('11000.00'), 100, 3)
+2025-06-09 15:26:46,676 - INFO - (120, 'Matthew', 'Weiss', 'matthew.weiss@sqltutorial.org', '650.123.1234', datetime.date(1996, 7, 18), 19, Decimal('8000.00'), 100, 5)
+2025-06-09 15:26:46,676 - INFO - (121, 'Adam', 'Fripp', 'adam.fripp@sqltutorial.org', '650.123.2234', datetime.date(1997, 4, 10), 19, Decimal('8200.00'), 100, 5)
+2025-06-09 15:26:46,676 - INFO - (122, 'Payam', 'Kaufling', 'payam.kaufling@sqltutorial.org', '650.123.3234', datetime.date(1995, 5, 1), 19, Decimal('7900.00'), 100, 5)
+2025-06-09 15:26:46,676 - INFO - (123, 'Shanta', 'Vollman', 'shanta.vollman@sqltutorial.org', '650.123.4234', datetime.date(1997, 10, 10), 19, Decimal('6500.00'), 100, 5)
+2025-06-09 15:26:46,676 - INFO - (145, 'John', 'Russell', 'john.russell@sqltutorial.org', None, datetime.date(1996, 10, 1), 15, Decimal('14000.00'), 100, 8)
+2025-06-09 15:26:46,676 - INFO - (146, 'Karen', 'Partners', 'karen.partners@sqltutorial.org', None, datetime.date(1997, 1, 5), 15, Decimal('13500.00'), 100, 8)
+2025-06-09 15:26:46,676 - INFO - (176, 'Jonathon', 'Taylor', 'jonathon.taylor@sqltutorial.org', None, datetime.date(1998, 3, 24), 16, Decimal('8600.00'), 100, 8)
+2025-06-09 15:26:46,676 - INFO - (177, 'Jack', 'Livingston', 'jack.livingston@sqltutorial.org', None, datetime.date(1998, 4, 23), 16, Decimal('8400.00'), 100, 8)
+2025-06-09 15:26:46,676 - INFO - (178, 'Kimberely', 'Grant', 'kimberely.grant@sqltutorial.org', None, datetime.date(1999, 5, 24), 16, Decimal('7000.00'), 100, 8)
+2025-06-09 15:26:46,676 - INFO - (179, 'Charles', 'Johnson', 'charles.johnson@sqltutorial.org', None, datetime.date(2000, 1, 4), 16, Decimal('6200.00'), 100, 8)
+2025-06-09 15:26:46,676 - INFO - (201, 'Michael', 'Hartstein', 'michael.hartstein@sqltutorial.org', '515.123.5555', datetime.date(1996, 2, 17), 10, Decimal('13000.00'), 100, 2)
+2025-06-09 15:26:46,676 - INFO - 
+--- Drop_view ---

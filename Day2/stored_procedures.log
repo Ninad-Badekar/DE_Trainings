@@ -1,0 +1,42 @@
+2025-06-09 16:37:20,438 - ERROR - Failed: GetEmployeesByDepartment ï¿½ (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5")
+2025-06-09 16:40:17,036 - ERROR - \u274c Failed to create: GetEmployeesByDepartment ï¿½ (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE GetEmployeesByDepartment(IN dept_id INT)\n        BEGIN\n        ' at line 2")
+2025-06-09 16:40:17,037 - ERROR - \u274c Failed to create: RaiseSalaryByDepartment ï¿½ (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE RaiseSalaryByDepartment(\n            IN dept_id INT,\n          ' at line 2")
+2025-06-09 16:40:17,043 - ERROR - \u274c Failed to create: GetTopNEarnersByDepartment ï¿½ (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE GetTopNEarnersByDepartment(\n            IN dept_id INT,\n       ' at line 2")
+2025-06-09 16:40:17,069 - INFO - \u2705 Created: CreateSalaryAuditTable
+2025-06-09 16:40:17,069 - ERROR - \u274c Failed to create: UpdateSalaryWithAudit ï¿½ (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE UpdateSalaryWithAudit(\n            IN emp_id INT,\n            I' at line 2")
+2025-06-09 16:40:17,071 - ERROR - \u274c Failed to call: GetEmployeesByDepartment ï¿½ (1305, 'PROCEDURE de_training.GetEmployeesByDepartment does not exist')
+2025-06-09 16:41:43,798 - INFO - \u2705 Created: CreateSalaryAuditTable
+2025-06-09 16:41:43,815 - INFO - \u2705 Created: GetEmployeesByDepartment
+2025-06-09 16:41:43,825 - INFO - \u2705 Created: RaiseSalaryByDepartment
+2025-06-09 16:41:43,837 - INFO - \u2705 Created: GetTopNEarnersByDepartment
+2025-06-09 16:41:43,847 - INFO - \u2705 Created: UpdateSalaryWithAudit
+2025-06-09 16:41:43,854 - INFO - \U0001f4de Called: GetEmployeesByDepartment
+2025-06-09 16:42:33,514 - INFO - Created: CreateSalaryAuditTable
+2025-06-09 16:42:33,541 - INFO - Created: GetEmployeesByDepartment
+2025-06-09 16:42:33,552 - INFO - Created: RaiseSalaryByDepartment
+2025-06-09 16:42:33,566 - INFO - Created: GetTopNEarnersByDepartment
+2025-06-09 16:42:33,580 - INFO - Created: UpdateSalaryWithAudit
+2025-06-09 16:42:33,580 - INFO -  Called: GetEmployeesByDepartment2025-06-09 16:46:34,774 - INFO - Created: CreateSalaryAuditTable
+2025-06-09 16:46:34,787 - INFO - Created: GetEmployeesByDepartment
+2025-06-09 16:46:34,798 - INFO - Created: RaiseSalaryByDepartment
+2025-06-09 16:46:34,807 - INFO - Created: GetTopNEarnersByDepartment
+2025-06-09 16:46:34,817 - INFO - Created: UpdateSalaryWithAudit
+2025-06-09 16:46:34,818 - INFO -  Called: GetEmployeesByDepartment
+2025-06-09 16:46:37,818 - INFO - Created: CreateSalaryAuditTable
+2025-06-09 16:46:37,834 - INFO - Created: GetEmployeesByDepartment
+2025-06-09 16:46:37,845 - INFO - Created: RaiseSalaryByDepartment
+2025-06-09 16:46:37,857 - INFO - Created: GetTopNEarnersByDepartment
+2025-06-09 16:46:37,870 - INFO - Created: UpdateSalaryWithAudit
+2025-06-09 16:46:37,872 - INFO -  Called: GetEmployeesByDepartment
+2025-06-09 16:46:39,854 - INFO - Created: CreateSalaryAuditTable
+2025-06-09 16:46:39,866 - INFO - Created: GetEmployeesByDepartment
+2025-06-09 16:46:39,876 - INFO - Created: RaiseSalaryByDepartment
+2025-06-09 16:46:39,889 - INFO - Created: GetTopNEarnersByDepartment
+2025-06-09 16:46:39,903 - INFO - Created: UpdateSalaryWithAudit
+2025-06-09 16:46:39,905 - INFO -  Called: GetEmployeesByDepartment
+2025-06-09 16:51:40,065 - INFO - Created: CreateSalaryAuditTable
+2025-06-09 16:51:40,066 - ERROR - Failed to create: GetEmployeesByDepartment — (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE GetEmployeesByDepartment(IN dept_id INT)\n        BEGIN\n        ' at line 2")
+2025-06-09 16:51:40,066 - ERROR - Failed to create: RaiseSalaryByDepartment — (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE RaiseSalaryByDepartment(\n            IN dept_id INT,\n          ' at line 2")
+2025-06-09 16:51:40,067 - ERROR - Failed to create: GetTopNEarnersByDepartment — (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE GetTopNEarnersByDepartment(\n            IN dept_id INT,\n       ' at line 2")
+2025-06-09 16:51:40,067 - ERROR - Failed to create: UpdateSalaryWithAudit — (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE PROCEDURE UpdateSalaryWithAudit(\n            IN emp_id INT,\n            I' at line 2")
+2025-06-09 16:51:40,068 - INFO - Called: GetEmployeesByDepartment
