@@ -1,12 +1,12 @@
 # What I’m Learning
 ## 1. Python Basics
-	-item Writing simple Python programs
+	* Writing simple Python programs
 
-	Understanding variables, data types, and control structures
+	* Understanding variables, data types, and control structures
 
-	Using functions and modules
+	* Using functions and modules
 
-	Handling files and exceptions
+	* Handling files and exceptions
 
 ## 2. ETL with Python
 	Extracting data from CSV files and APIs
