@@ -1,6 +1,6 @@
 # What I’m Learning
 ## 1. Python Basics
-	Writing simple Python programs
+	-item Writing simple Python programs
 
 	Understanding variables, data types, and control structures
 
