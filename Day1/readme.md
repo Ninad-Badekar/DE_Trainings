@@ -9,24 +9,24 @@
 	* Handling files and exceptions
 
 ## 2. ETL with Python
-	Extracting data from CSV files and APIs
+	* Extracting data from CSV files and APIs
 
-	Transforming data using Python libraries like pandas
+	* Transforming data using Python libraries like pandas
 
-	Loading cleaned/transformed data into different formats and databases
+	* Loading cleaned/transformed data into different formats and databases
 
 ## 3. Database Connections
-	Connecting to MySQL and other databases using Python connectors (pymysql, mysql-connector-python)
+	* Connecting to MySQL and other databases using Python connectors (pymysql, mysql-connector-python)
 
-	Executing basic SQL queries via Python
+	* Executing basic SQL queries via Python
 
-	Managing database connections and transactions
+	* Managing database connections and transactions
 
 # Tools and Libraries Used
-	Python 3.x
+	- Python 3.x
 
-	pandas
+	- pandas
 
-	pymysql / mysql-connector-python / sqlalchemy
+	- pymysql / mysql-connector-python / sqlalchemy
 
-	requests (for API calls)
+	- requests (for API calls)
