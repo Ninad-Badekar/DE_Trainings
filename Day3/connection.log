@@ -1,0 +1,31 @@
+2025-06-10 11:14:04,563 - INFO - This goes to 
+2025-06-10 11:14:04,614 - INFO - Dropped existing trigger if it existed.
+2025-06-10 11:14:04,629 - INFO - Trigger 'after_employee_update' created successfully.
+2025-06-10 11:14:04,632 - INFO - Updated employee 100's first name to 'Sahil'.
+2025-06-10 11:14:04,633 - INFO - Trigger log entries found: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}]
+2025-06-10 11:14:04,638 - INFO - Database connection closed.
+2025-06-10 11:18:22,315 INFO Database connection established.
+2025-06-10 11:18:22,379 INFO Updated employee_id=100 first_name to 'ninad'.
+2025-06-10 11:18:22,381 INFO Inserted new employee with employee_id=207.
+2025-06-10 11:18:22,386 INFO Database connection closed.
+2025-06-10 11:47:19,642 INFO Database connection established.
+2025-06-10 11:47:19,664 ERROR MySQL Error: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER $$\n\nCREATE TRIGGER after_employee_update\nAFTER UPDATE ON employees\nFOR' at line 1")
+2025-06-10 11:47:19,664 INFO Database connection closed.
+2025-06-10 11:49:52,163 INFO Database connection established.
+2025-06-10 11:49:52,174 ERROR MySQL Error: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMITER $$\n\nCREATE TRIGGER after_employee_update\nAFTER UPDATE ON employees\nFOR' at line 1")
+2025-06-10 11:49:52,175 INFO Database connection closed.
+2025-06-10 11:51:56,503 INFO Database connection established.
+2025-06-10 11:51:56,523 INFO Updated employee_id=100 first_name to 'Ninad'.
+2025-06-10 11:51:56,523 INFO Inserted new employee with employee_id=208.
+2025-06-10 11:51:56,524 ERROR MySQL Error: (1146, "Table 'de_training.employee_deletions' doesn't exist")
+2025-06-10 11:51:56,524 INFO Database connection closed.
+2025-06-10 11:54:42,568 INFO Database connection established.
+2025-06-10 11:54:42,606 INFO Updated employee_id=100 first_name to 'Ninad'.
+2025-06-10 11:54:42,606 INFO Inserted new employee with employee_id=209.
+2025-06-10 11:54:42,607 ERROR MySQL Error: (1146, "Table 'de_training.employee_deletions' doesn't exist")
+2025-06-10 11:54:42,607 INFO Database connection closed.
+2025-06-10 11:58:08,550 INFO Database connection established.
+2025-06-10 11:58:08,591 INFO Updated employee_id=100 first_name to 'Ninad'.
+2025-06-10 11:58:08,592 INFO Inserted new employee with employee_id=210.
+2025-06-10 11:58:08,593 INFO Deleted employee_id=210.
+2025-06-10 11:58:08,597 INFO Database connection closed.

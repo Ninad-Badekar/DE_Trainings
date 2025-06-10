@@ -1,0 +1,79 @@
+
+2025-06-10 10:43:15,406 - ERROR - MySQL Error: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6")
+2025-06-10 10:43:15,407 - INFO - Database connection closed.
+2025-06-10 10:44:20,880 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:44:20,895 - INFO - Trigger 'after_employee_delete' created successfully.
+2025-06-10 10:44:20,900 - INFO - Deleted employee with ID 1 from 'employees'.
+2025-06-10 10:44:20,902 - ERROR - MySQL Error: (1146, "Table 'de_training.employees_log' doesn't exist")
+2025-06-10 10:44:20,903 - INFO - Database connection closed.
+2025-06-10 10:45:08,443 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:45:08,455 - INFO - Trigger 'after_employee_delete' created successfully.
+2025-06-10 10:45:08,457 - INFO - Deleted employee with ID 1 from 'employees'.
+2025-06-10 10:45:08,459 - WARNING - No entries found in 'employees_log' for the deleted employee.
+2025-06-10 10:45:08,459 - INFO - Database connection closed.
+2025-06-10 10:45:43,219 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:45:43,230 - INFO - Trigger 'after_employee_delete' created successfully.
+2025-06-10 10:45:43,232 - INFO - Deleted employee with ID 1 from 'employees'.
+2025-06-10 10:45:43,233 - WARNING - No entries found in 'employee_logs' for the deleted employee.
+2025-06-10 10:45:43,233 - INFO - Database connection closed.
+2025-06-10 10:46:25,116 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:46:25,128 - INFO - Trigger 'after_employee_delete' created successfully.
+2025-06-10 10:46:25,130 - INFO - Deleted employee with ID 1 from 'employees'.
+2025-06-10 10:46:25,131 - WARNING - No entries found in 'employee_logs' for the deleted employee.
+2025-06-10 10:46:25,132 - INFO - Database connection closed.
+2025-06-10 10:46:49,251 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:46:49,259 - INFO - Trigger 'after_employee_delete' created successfully.
+2025-06-10 10:46:49,260 - INFO - Deleted employee with ID 9 from 'employees'.
+2025-06-10 10:46:49,261 - WARNING - No entries found in 'employee_logs' for the deleted employee.
+2025-06-10 10:46:49,261 - INFO - Database connection closed.
+2025-06-10 10:47:21,096 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:47:21,105 - INFO - Trigger 'after_employee_delete' created successfully.
+2025-06-10 10:47:21,108 - ERROR - MySQL Error: (1451, 'Cannot delete or update a parent row: a foreign key constraint fails (`de_training`.`employees`, CONSTRAINT `employees_ibfk_3` FOREIGN KEY (`manager_id`) REFERENCES `employees` (`employee_id`))')
+2025-06-10 10:47:21,109 - INFO - Database connection closed.
+2025-06-10 10:50:03,111 - INFO - Unset manager_id for employees managed by 100.
+2025-06-10 10:50:03,113 - ERROR - Error during manual cascade: (1054, "Unknown column 'first_name' in 'field list'")
+2025-06-10 10:50:03,114 - INFO - DB connection closed.
+2025-06-10 10:57:36,138 - INFO - Dropped existing trigger if it existed.
+2025-06-10 10:57:36,150 - INFO - Trigger 'after_employee_update' created successfully.
+2025-06-10 10:57:36,154 - ERROR - MySQL Error: (1054, "Unknown column 'first_name' in 'field list'")
+2025-06-10 10:57:36,154 - INFO - Database connection closed.
+2025-06-10 11:11:19,228 - INFO - Dropped existing trigger if it existed.
+2025-06-10 11:11:19,241 - INFO - Trigger 'after_employee_update' created successfully.
+2025-06-10 11:11:19,245 - INFO - Updated employee 100's first name to 'UpdatedName'.
+2025-06-10 11:11:19,247 - INFO - Trigger log entries found: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}]
+2025-06-10 11:11:19,251 - INFO - Database connection closed.
+2025-06-10 11:11:53,338 - INFO - Dropped existing trigger if it existed.
+2025-06-10 11:11:53,350 - INFO - Trigger 'after_employee_update' created successfully.
+2025-06-10 11:11:53,352 - INFO - Updated employee 100's first name to 'Sahil'.
+2025-06-10 11:11:53,352 - INFO - Trigger log entries found: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}]
+2025-06-10 11:11:53,356 - INFO - Database connection closed.
+2025-06-10 11:14:04,563 INFO This goes to trigger.log
+2025-06-10 11:14:04,563 - INFO - This goes to 
+2025-06-10 11:14:04,614 - INFO - Dropped existing trigger if it existed.
+2025-06-10 11:14:04,629 - INFO - Trigger 'after_employee_update' created successfully.
+2025-06-10 11:14:04,632 - INFO - Updated employee 100's first name to 'Sahil'.
+2025-06-10 11:14:04,633 - INFO - Trigger log entries found: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}]
+2025-06-10 11:14:04,638 - INFO - Database connection closed.
+2025-06-10 11:14:54,590 INFO This goes to trigger.log
+2025-06-10 11:18:22,359 INFO Dropped existing update and insert triggers if they existed.
+2025-06-10 11:18:22,369 INFO Trigger 'after_employee_update' created successfully.
+2025-06-10 11:18:22,377 INFO Trigger 'after_employee_insert' created successfully.
+2025-06-10 11:18:22,382 INFO Update trigger log entries: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}]
+2025-06-10 11:18:22,383 INFO Insert trigger log entries: [{'employee_id': 207, 'first_name': 'TestFirst', 'action': 'inserted'}]
+2025-06-10 11:47:19,664 INFO Dropped existing update, insert, and delete triggers if they existed.
+2025-06-10 11:49:52,174 INFO Dropped existing update, insert, and delete triggers if they existed.
+2025-06-10 11:51:56,507 INFO Dropped existing update, insert, and delete triggers if they existed.
+2025-06-10 11:51:56,512 INFO Trigger 'after_employee_update' created successfully.
+2025-06-10 11:51:56,517 INFO Trigger 'after_employee_insert' created successfully.
+2025-06-10 11:51:56,521 INFO Trigger 'after_employee_delete' created successfully.
+2025-06-10 11:54:42,592 INFO Dropped existing update, insert, and delete triggers if they existed.
+2025-06-10 11:54:42,596 INFO Trigger 'after_employee_update' created successfully.
+2025-06-10 11:54:42,601 INFO Trigger 'after_employee_insert' created successfully.
+2025-06-10 11:54:42,605 INFO Trigger 'after_employee_delete' created successfully.
+2025-06-10 11:58:08,572 INFO Dropped existing update, insert, and delete triggers if they existed.
+2025-06-10 11:58:08,578 INFO Trigger 'after_employee_update' created successfully.
+2025-06-10 11:58:08,584 INFO Trigger 'after_employee_insert' created successfully.
+2025-06-10 11:58:08,590 INFO Trigger 'after_employee_delete' created successfully.
+2025-06-10 11:58:08,594 INFO Update trigger log entries: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Ninad', 'action': 'updated'}]
+2025-06-10 11:58:08,594 INFO Insert trigger log entries: [{'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'UpdatedName', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'Sahil', 'action': 'updated'}, {'employee_id': 100, 'first_name': 'ninad', 'action': 'updated'}, {'employee_id': 207, 'first_name': 'TestFirst', 'action': 'inserted'}, {'employee_id': 100, 'first_name': 'Ninad', 'action': 'updated'}, {'employee_id': 210, 'first_name': 'TestFirst', 'action': 'inserted'}]
+2025-06-10 11:58:08,595 INFO Delete trigger log entries: [{'employee_id': 210, 'first_name': 'TestFirst', 'last_name': 'TestLast', 'email': 'test@example.com', 'deletion_time': datetime.datetime(2025, 6, 10, 11, 58, 8)}]
