@@ -1,4 +1,4 @@
-# MySQL Triggers Reference
+# MySQL Triggers 
 
 ## Trigger Creation Syntax
 ```sql
