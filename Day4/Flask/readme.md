@@ -9,7 +9,3 @@ This Flask web application collects form submissions and displays them on a webp
 - **Timestamp Logging**: Records the time each submission is made.
 - **HTML Rendering**: Displays submitted data dynamically on the webpage.
 
-### Next Steps:
-- Implement a database for persistent storage.
-- Add input validation and CSRF protection.
-- Improve error handling and user feedback.
