@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Data Table</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-section { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        label { display: block; margin: 10px 0 5px; }
+        input, textarea { width: 100%; padding: 8px; }
+        button { background: #4CAF50; color: white; padding: 10px 15px; border: none; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Form Submission System</h1>
+
+    <!-- Your Existing Form -->
+    <div class="form-section">
+        <h2>Submit Information</h2>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Display Table -->
+    <div class="table-section">
+        <h2>Submissions</h2>
+        {% if submissions %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for submission in submissions %}
+                <tr>
+                    <td>{{ submission.name }}</td>
+                    <td>{{ submission.email }}</td>
+                    <td>{{ submission.message }}</td>
+                    <td>{{ submission.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No submissions yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
