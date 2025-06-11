@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-# Store submissions in memory (for demo - use database in production)
+
 submissions = []
 
 @app.route('/', methods=['GET', 'POST'])
