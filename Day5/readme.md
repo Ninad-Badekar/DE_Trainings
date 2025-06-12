@@ -445,7 +445,7 @@ Data engineering involves designing scalable, efficient architectures for data p
 
 ---
 
-## 🌟 Summary
+##  Summary
 | Architecture | Key Feature | Best Use Case |
 |-------------|------------|--------------|
 | **ETL** | Structured data, batch processing | Enterprise Data Warehouses |
