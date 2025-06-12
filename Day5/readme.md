@@ -511,11 +511,9 @@ MapReduce is Hadoop’s **distributed computing model** that breaks large datase
 
 ### **Example: Word Count in MapReduce**
 #### **Step 1: Map Phase**
-- Input: ["Big data is amazing", "Big data drives insights"]
-- Output (Key-Value pairs): big -> 1 data -> 1 is -> 1 amazing -> 1 big -> 1 data -> 1 drives -> 1 insights -> 1
+ Input: ["Big data is amazing", "Big data drives insights"]
+ Output (Key-Value pairs): big -> 1 data -> 1 is -> 1 amazing -> 1 big -> 1 data -> 1 drives -> 1 insights -> 1
 
-
-#### **Step 2: Shuffle & Sort Phase**
 
 
 #### **Step 2: Shuffle & Sort Phase**
@@ -527,14 +525,14 @@ Final Output: big -> 2 data -> 2 is -> 1 amazing -> 1 drives -> 1 insights -> 1
 
 
 ### **Advantages**
-✔ Fault tolerance through distributed execution  
-✔ Parallel processing across multiple nodes  
-✔ Scalability for large datasets  
+- Fault tolerance through distributed execution  
+- Parallel processing across multiple nodes  
+- Scalability for large datasets  
 
 ### **Limitations**
-✖ High disk I/O because of frequent **reads/writes**  
-✖ Slow for real-time processing  
-✖ Limited support for iterative machine learning workloads  
+- High disk I/O because of frequent **reads/writes**  
+- Slow for real-time processing  
+- Limited support for iterative machine learning workloads  
 
 ---
 
@@ -554,27 +552,27 @@ Apache Spark is a **lightning-fast big data processing engine** that eliminates 
 | **Streaming** | External tools needed (Kafka, Flink) | Built-in **Spark Streaming** |
 
 ### **Key Features of Spark**
-✔ **In-Memory Processing** – Avoids repeated disk reads/writes  
-✔ **Unified Engine** – Handles batch, streaming, graph, and ML workloads  
-✔ **Fault-Tolerant RDDs** – Recovers lost data without replication overhead  
-✔ **Ease of Use** – Supports **Python (PySpark), Scala, Java, R, SQL**  
+- **In-Memory Processing** – Avoids repeated disk reads/writes  
+- **Unified Engine** – Handles batch, streaming, graph, and ML workloads  
+- **Fault-Tolerant RDDs** – Recovers lost data without replication overhead  
+- **Ease of Use** – Supports **Python (PySpark), Scala, Java, R, SQL**  
 
 ### **Problems Spark Solves Over MapReduce**
-🚀 Faster processing for **real-time analytics**  
-🚀 Efficient **iterative computing** for ML algorithms  
-🚀 Reduces **disk I/O** delays  
-🚀 Simplifies **multi-step jobs** with a single execution engine  
+- Faster processing for **real-time analytics**  
+- Efficient **iterative computing** for ML algorithms  
+- Reduces **disk I/O** delays  
+- Simplifies **multi-step jobs** with a single execution engine  
 
 ### **Use Cases of Spark**
-✔ Real-time financial fraud detection  
-✔ Streaming data pipelines (IoT, stock market feeds)  
-✔ Scalable **AI/ML model training**  
-✔ Faster ETL in cloud-based environments  
+- Real-time financial fraud detection  
+- Streaming data pipelines (IoT, stock market feeds)  
+Scalable **AI/ML model training**  
+Faster ETL in cloud-based environments  
 
 ---
 
 ##  Conclusion
-✔ **Hadoop** is great for **batch processing** but suffers from slow disk-based operations.  
-✔ **MapReduce** efficiently processes large datasets but lacks **real-time capabilities**.  
-✔ **Spark** solves Hadoop's limitations by offering **in-memory computing, streaming, and machine learning support**.  
+- **Hadoop** is great for **batch processing** but suffers from slow disk-based operations.  
+- **MapReduce** efficiently processes large datasets but lacks **real-time capabilities**.  
+- **Spark** solves Hadoop's limitations by offering **in-memory computing, streaming, and machine learning support**.  
 
