@@ -160,3 +160,74 @@ Data processing involves transforming raw data into meaningful insights using di
 - Coordinating multiple machine learning pipelines.
 - Managing dependencies in analytics workflows.
 
+# Storage & Formats Overview
+
+Data storage involves different architectures and formats optimized for specific use cases. Below is a breakdown of key storage methods and data formats.
+
+## 1. Columnar Storage
+- Stores data **column by column** instead of row by row.
+- Optimized for **analytical queries** where operations (aggregations, filtering) focus on specific columns.
+- Provides **higher compression** and **faster retrieval** compared to row-based storage.
+
+### **Common Columnar Formats:**
+- **Parquet** – Highly efficient for big data & analytics (Apache Hadoop, Spark).
+- **ORC (Optimized Row Columnar)** – Best suited for Hive-based data warehouses.
+
+**Use Cases:**
+- Business intelligence (BI) and analytics workloads.
+- Data warehousing for large-scale reporting.
+
+## 2. Row-based Storage
+- Stores data **record by record (row-wise)**, making it efficient for transactional operations.
+- Best suited for **frequent inserts, updates, and deletions**.
+
+### **Common Row-based Formats:**
+- **CSV (Comma-Separated Values)** – Simple, human-readable but not optimized for large-scale querying.
+- **JSON (JavaScript Object Notation)** – Widely used for APIs and NoSQL databases.
+- **Traditional databases** (MySQL, PostgreSQL, SQL Server) store data row-wise.
+
+**Use Cases:**
+- Online transaction processing (OLTP) applications.
+- Real-time user interactions (e.g., banking systems, e-commerce platforms).
+
+## 3. Distributed File System
+- Designed to store **large-scale distributed data** across multiple nodes.
+- Enables parallel processing for **big data analytics**.
+
+### **Common Distributed File Systems:**
+- **HDFS (Hadoop Distributed File System)** – Core storage system for Hadoop ecosystem.
+- **Amazon S3** – Cloud-based object storage for scalable data management.
+- **Azure Blob Storage** – Microsoft's solution for unstructured data storage.
+
+**Use Cases:**
+- Big data processing and machine learning workloads.
+- Storing backups and large datasets in a cloud or cluster environment.
+
+## 4. Data Partitioning
+- **Divides large datasets** into smaller subsets for efficient querying and processing.
+- Each partition is stored separately, improving performance in **distributed systems**.
+
+### **Types of Partitioning:**
+- **Range Partitioning** – Splits data based on a range of values (e.g., date-based partitions).
+- **List Partitioning** – Divides data based on predefined categories (e.g., country codes).
+- **Hash Partitioning** – Distributes data using hash functions for even load balancing.
+
+**Use Cases:**
+- Data lakes and large databases with high read/query performance needs.
+- Cloud-based storage systems to speed up query execution.
+
+## 5. Data Sharding
+- **Splits large databases** into smaller, more manageable parts called **shards**.
+- Improves **scalability and performance** in distributed applications.
+
+### **Sharding Techniques:**
+- **Horizontal Sharding** – Splits rows across multiple databases.
+- **Vertical Sharding** – Segments tables by column-based distribution.
+- **Geographical Sharding** – Stores data based on **regional proximity** (e.g., nearest servers).
+
+**Use Cases:**
+- High-traffic applications like social media platforms.
+- Large-scale multi-tenant databases requiring independent partitions.
+
+
+
