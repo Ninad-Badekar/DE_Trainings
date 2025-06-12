@@ -340,5 +340,121 @@ Ensures that data meets **business standards and analytical needs**.
 - **Backward & Forward Compatibility** – Ensuring older and newer records remain usable.
 - **Flexible Data Formats** – Using adaptable formats like Avro, Parquet, or JSON.
 
+# Architectures in Data Engineering
+
+Data engineering involves designing scalable, efficient architectures for data processing, storage, and analytics. Below are key data architectures widely used in modern systems.
+
+## 1. Traditional ETL Architecture
+### **Overview**
+- Extract data from various sources (**DBs, APIs, Files**).
+- Transform data using **ETL tools** (e.g., Informatica, Talend, AWS Glue).
+- Load the processed data into a **Data Warehouse** (e.g., Snowflake, Redshift).
+- Serve business intelligence (**BI tools**) for reporting and analytics.
+
+### **Workflow**
+- Sources (DBs, APIs, Files) --> ETL Tools --> Data Warehouse --> BI Tools
+
+
+### **Use Cases**
+- Structured transactional data.
+- Batch processing for historical reporting.
+- Enterprise data warehouses.
+
+## 2. Modern ELT Architecture
+### **Overview**
+- Data is **first extracted and loaded** into **cloud storage** (e.g., AWS S3, Google Cloud Storage).
+- Transformation occurs **inside the data warehouse** using **SQL-based operations**.
+- Enables **scalability** by leveraging cloud-native processing.
+
+### **Workflow**
+- Sources --> Cloud Storage --> Data Warehouse --> Transform via SQL --> BI
+
+
+### **Use Cases**
+- Cloud-based **data warehouses** (BigQuery, Snowflake, Redshift).
+- **Flexible transformations** post-loading.
+- Supports **real-time and batch workflows**.
+
+---
+
+## 3. Lambda Architecture
+### **Overview**
+- **Hybrid model** combining **batch and real-time** processing.
+- **Batch Layer** handles historical data (**Hadoop, Spark**).
+- **Speed Layer** processes real-time events (**Kafka, Spark Streaming**).
+- **Serving Layer** aggregates results for consumption.
+
+### **Workflow**
+- Batch Layer (Hadoop) + Speed Layer (Spark Streaming) --> Serving Layer
+
+
+### **Use Cases**
+- Large-scale **big data processing**.
+- Fraud detection in financial transactions.
+- IoT analytics requiring both real-time and historical insights.
+
+---
+
+## 4. Kappa Architecture
+### **Overview**
+- **Stream-based approach** without batch processing.
+- Data is continuously processed **in real-time** (e.g., Kafka, Apache Flink).
+- Optimized for **event-driven workflows**.
+
+### **Workflow**
+- Stream Processing (Kafka, Flink) --> Data Store / Output
+
+
+### **Use Cases**
+- **IoT streaming** (sensor data analysis).
+- **Log processing** for security monitoring.
+- **Real-time recommendation engines**.
+
+---
+
+## 5. Data Lakehouse Architecture
+### **Overview**
+- **Hybrid solution** combining **data lakes and warehouses**.
+- Supports **structured, semi-structured, and unstructured data**.
+- Uses **query engines** (Delta Lake, Apache Iceberg) for fast access.
+
+### **Workflow**
+- Data Lake (S3, ADLS) + Query Engine (Delta Lake) --> BI/ML
+
+### **Use Cases**
+- AI/ML applications needing raw and processed data.
+- Enterprises migrating from **traditional data warehouses**.
+- **Flexible schema** evolution.
+
+---
+
+## 6. Event-Driven Architecture
+### **Overview**
+- **Based on events** triggered by user interactions or system changes.
+- Producers **send events** to streaming systems (**Kafka, Pub/Sub**).
+- Consumers **process events** via stream processors (**Flink, Spark Streaming**).
+
+### **Workflow**
+- Producers --> Event Streams (Kafka) --> Consumers (Stream Processors)
+
+
+### **Use Cases**
+- **Microservices communication** using Kafka topics.
+- **Clickstream processing** for website analytics.
+- **Real-time fraud detection** in financial systems.
+
+---
+
+## 🌟 Summary
+| Architecture | Key Feature | Best Use Case |
+|-------------|------------|--------------|
+| **ETL** | Structured data, batch processing | Enterprise Data Warehouses |
+| **ELT** | Cloud-native, SQL-based transformations | Scalable cloud analytics |
+| **Lambda** | Batch + real-time processing | IoT & fraud detection |
+| **Kappa** | Pure streaming, real-time insights | Log monitoring, live dashboards |
+| **Lakehouse** | Combines lakes & warehouses | AI/ML workloads |
+| **Event-Driven** | Event-based, async processing | Microservices, stream analytics |
+
+---
 
 
