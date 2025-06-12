@@ -24,5 +24,4 @@ This Flask web application collects form submissions and displays them on a webp
   - `/allEmp/{emp_id}` - Handles dynamic employee IDs in routes.
 - **Basic Error Handling**: Checks if an employee exists before updating or deleting.
 
-Let me know if you need any modifications! 🚀
 
