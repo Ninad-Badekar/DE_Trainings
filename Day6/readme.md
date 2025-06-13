@@ -4,7 +4,7 @@ This README provides detailed information about **Apache Spark**, its setup on a
 
 ---
 
-## 1️⃣ What is Apache Spark? 🚀
+## 1️⃣ What is Apache Spark? 
 
 ### Overview
 Apache Spark is a **fast, distributed computing framework** for processing large-scale data across clusters. It enhances Hadoop’s **MapReduce** model by performing **in-memory computations**, reducing disk I/O and speeding up execution.
@@ -24,7 +24,7 @@ Apache Spark is a **fast, distributed computing framework** for processing large
 
 ---
 
-## 2️⃣ How Does Spark Work? ⚙️
+## 2️⃣ How Does Spark Work? 
 
 Spark processes data **in-memory** using **RDDs (Resilient Distributed Datasets)**, avoiding the disk-based bottlenecks of **Hadoop’s MapReduce**.
 
@@ -93,7 +93,7 @@ Databricks operates on a **Lakehouse architecture**, which merges **data lake fl
 - **Collaboration** – Enables seamless teamwork across engineering and data science teams.  
 - **Security & Governance** – Provides built-in **access control and compliance** mechanisms.  
 
-## 🎯 Use Cases
+##  Use Cases
 - **Big Data Processing** – Handles ETL pipelines at scale.  
 - **Data Science & AI** – Supports model training and deployment workflows.  
 - **Streaming Analytics** – Processes live data feeds for real-time insights.  
