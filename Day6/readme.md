@@ -102,3 +102,29 @@ Databricks operates on a **Lakehouse architecture**, which merges **data lake fl
 ---
 
  **Databricks provides a unified cloud platform for big data, AI, and analytics, simplifying Spark usage for enterprises.** 🚀  
+
+# SparkSession in Apache Spark
+
+##  Overview
+A **SparkSession** is the main entry point for working with **Apache Spark**, enabling users to process **structured and semi-structured data** efficiently. It provides a unified interface for using Spark’s features, including **DataFrame API, SQL queries, streaming data, and machine learning**.
+
+##  Key Features of SparkSession
+- **Manages Spark Context** – Eliminates the need to create multiple contexts.
+- **Enables DataFrame API** – Allows structured data processing with SQL-like functionality.
+- **Supports Streaming & ML** – Works seamlessly with Spark Streaming and MLlib.
+- **Optimizes Resource Management** – Handles cluster execution efficiently.
+
+## 🔹 Why is SparkSession Important?
+- Acts as **a single entry point** for managing configurations and operations.
+- Simplifies working with structured and semi-structured data.
+- Provides built-in **query optimization** and **distributed processing**.
+- Supports various data sources such as **Parquet, JSON, Hive, and JDBC**.
+
+##  Use Cases
+- **Data Wrangling** – Preprocessing large datasets before analytics.  
+- **SQL Queries on Big Data** – Running SQL queries on distributed data.  
+- **Real-Time Data Processing** – Streaming ETL pipelines using Spark Streaming.  
+- **Machine Learning Workflows** – Training ML models at scale with MLlib.  
+
+---
+
