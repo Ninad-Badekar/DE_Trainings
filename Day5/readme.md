@@ -488,10 +488,10 @@ Apache Hadoop is an **open-source framework** designed for storing and processin
 4. Processed results are **aggregated** and stored for further use.
 
 ### **Use Cases**
-✔ Handling petabyte-scale structured & unstructured data  
-✔ Large-scale data warehousing  
-✔ Machine learning preprocessing  
-✔ Log analysis for security and monitoring  
+- Handling petabyte-scale structured & unstructured data  
+- Large-scale data warehousing  
+- Machine learning preprocessing  
+- Log analysis for security and monitoring  
 
 ---
 
