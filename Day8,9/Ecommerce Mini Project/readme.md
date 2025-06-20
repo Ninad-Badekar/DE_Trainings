@@ -1,0 +1,1 @@
+- Created Users schema added some data using faker to api and then fetched it to a local mysql table
