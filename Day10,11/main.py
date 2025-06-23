@@ -1,95 +1,104 @@
-from typing import List
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from sqlalchemy.orm import Session
+from pydantic import BaseModel, EmailStr
+from typing import List, Optional
+from uuid import uuid4
+from datetime import datetime, timedelta
 from jose import JWTError, jwt
+import os
+from dotenv import load_dotenv
 
-import models, schemas, crud, utils
-from database import engine, get_db
-from utils import create_access_token
-
-models.Base.metadata.create_all(bind=engine)
-
+load_dotenv()
 app = FastAPI()
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
+SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-# 🔐 Dependency: Validate JWT and return current user
-def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+class User(BaseModel):
+    id: str
+    username: str
+    email: EmailStr
+    password: str
+    gender: str
+    age: int
+    phone_number: str
+    nationality: str
+    is_active: Optional[bool] = True
+
+users: List[User] = []
+
+def create_access_token(data: dict, expires_delta: timedelta = None):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
+def verify_token(token: str):
     try:
-        payload = jwt.decode(token, utils.SECRET_KEY, algorithms=[utils.ALGORITHM])
-        email = payload.get("sub")
-        if not email:
-            raise HTTPException(status_code=401, detail="Invalid token payload")
-        user = crud.get_user_by_email(db, email)
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
-        return user
+        return jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
     except JWTError:
-        raise HTTPException(status_code=401, detail="Invalid token")
+        return None
 
+def get_current_user(token: str = Depends(oauth2_scheme)):
+    payload = verify_token(token)
+    if not payload:
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
+    return payload["sub"]
 
-@app.post("/register", response_model=schemas.UserResponse)
-def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    if crud.get_user_by_email(db, user.email):
-        raise HTTPException(status_code=400, detail="Email already registered")
-    return crud.create_user(db, user)
-
-
-@app.post("/login")
-def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = crud.get_user_by_email(db, form_data.username)
-    if not user or not utils.verify_password(form_data.password, user.hashed_password):
-        raise HTTPException(status_code=401, detail="Invalid credentials")
-    token = create_access_token(data={"sub": user.email})
-    return {"access_token": token, "token_type": "bearer"}
-
-
-@app.get("/users/me", response_model=schemas.UserResponse)
-def read_users_me(current_user: models.User = Depends(get_current_user)):
-    return current_user
-
-
-@app.get("/users/", response_model=List[schemas.UserResponse])
-def list_users(db: Session = Depends(get_db)):
-    return db.query(models.User).all()
-
-
-@app.get("/users/{user_id}", response_model=schemas.UserResponse)
-def get_user_by_id(
-    user_id: int,
-    db: Session = Depends(get_db),
-    current_user: models.User = Depends(get_current_user)
-):
-    user = crud.get_user_by_id(db, user_id)
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
+@app.post("/register", response_model=User)
+def register(user: User):
+    if any(u.email == user.email for u in users):
+        raise HTTPException(status_code=400, detail="Email already exists")
+    users.append(user)
     return user
 
+@app.post("/token")
+def generate_token(form_data: OAuth2PasswordRequestForm = Depends()):
+    for u in users:
+        if u.email == form_data.username and u.password == form_data.password:
+            token = create_access_token({"sub": u.email})
+            return {"access_token": token, "token_type": "bearer"}
+    raise HTTPException(status_code=401, detail="Invalid credentials")
 
+@app.get("/users/", response_model=List[User])
+def list_users(current_user: str = Depends(get_current_user)):
+    return users
 
+@app.get("/users/{user_id}", response_model=User)
+def get_user(user_id: str, current_user: str = Depends(get_current_user)):
+    for user in users:
+        if user.id == user_id:
+            return user
+    raise HTTPException(status_code=404, detail="User not found")
 
-@app.put("/users/{user_id}", response_model=schemas.UserResponse)
-def update_user(
-    user_id: int,
-    user_update: schemas.UserUpdate,
-    db: Session = Depends(get_db),
-    current_user: models.User = Depends(get_current_user)
-):
-    db_user = crud.get_user_by_id(db, user_id)
-    if not db_user:
-        raise HTTPException(status_code=404, detail="User not found")
-    return crud.update_user(db, db_user, user_update)
-
+@app.put("/users/{user_id}", response_model=User)
+def update_user(user_id: str, updated: User, current_user: str = Depends(get_current_user)):
+    for i, user in enumerate(users):
+        if user.id == user_id:
+            updated.id = user.id
+            users[i] = updated
+            return updated
+    raise HTTPException(status_code=404, detail="User not found")
 
 @app.delete("/users/{user_id}")
-def delete_user(
-    user_id: int,
-    db: Session = Depends(get_db),
-    current_user: models.User = Depends(get_current_user)
-):
-    db_user = crud.get_user_by_id(db, user_id)
-    if not db_user:
-        raise HTTPException(status_code=404, detail="User not found")
-    crud.delete_user(db, db_user)
-    return {"detail": f"User {user_id} deleted successfully"}
+def delete_user(user_id: str, current_user: str = Depends(get_current_user)):
+    for i, user in enumerate(users):
+        if user.id == user_id:
+            users.pop(i)
+            return {"detail": f"User {user_id} deleted successfully"}
+    raise HTTPException(status_code=404, detail="User not found")
+
+# Preloaded admin user
+users.append(User(
+    id=str(uuid4()),
+    username="admin",
+    email="admin@example.com",
+    password="adminpass",
+    gender="non-binary",
+    age=35,
+    phone_number="9999999999",
+    nationality="Adminland",
+    is_active=True
+))
