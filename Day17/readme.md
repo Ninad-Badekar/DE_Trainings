@@ -1,0 +1,4 @@
+- Spark Theory
+    - spark vs hadoop
+    - When to use spark and when to use hadoop
+    - Common misconceptions about hadoop and spark
