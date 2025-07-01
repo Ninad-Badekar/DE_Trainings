@@ -47,7 +47,21 @@ def get_user(user_id: int, db: Session = Depends(get_db), current_user=Depends(g
         raise HTTPException(status_code=404, detail="User not found")
     return user
  
- 
+@router.put("/{user_id}", response_model=schemas.UserOut)
+def update_user(
+    user_id: int,
+    user_update: schemas.UserUpdate,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user)
+):
+    if current_user.user_id != user_id:
+        raise HTTPException(status_code=403, detail="Unauthorized")
+
+    updated_user = crud.update_user(db, user_id, user_update.dict(exclude_unset=True))
+    if not updated_user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    return updated_user
 @router.delete("/{user_id}")
 def remove_user(user_id: int, db: Session = Depends(get_db), current_user=Depends(get_current_user)):
     success = crud.delete_user(db, user_id)

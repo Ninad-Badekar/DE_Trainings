@@ -33,7 +33,16 @@ def get_user_by_id(db: Session, user_id: int):
 def get_users(db: Session):
     return db.query(User).all()
  
- 
+def update_user(db: Session, user_id: int, updates: dict):
+    user = db.query(User).filter(User.user_id == user_id).first()
+    if not user:
+        return None
+    for key, value in updates.items():
+        if hasattr(user, key) and value is not None:
+            setattr(user, key, value)
+    db.commit()
+    db.refresh(user)
+    return user 
 def delete_user(db: Session, user_id: int):
     user = get_user_by_id(db, user_id)
     if user:
