@@ -1,0 +1,15 @@
+- Spark Theory
+    - Transformations
+    - Dag and Lazy Evaluation
+    - Spark sql engine
+    - RDD in spark
+    - Spark Session vs Spark Context
+    - Jobs, Task , Stages
+    - repartition vs coalesce
+    - Sorting and Shuffling
+    - BroadCast Join
+    - Shuffle Sort merge , shuffle hash join
+    - Dynamic Resource Allocation
+    - Dynamic Partition Pruning
+    - Executor Out of memory
+    - Driver Out of memory
