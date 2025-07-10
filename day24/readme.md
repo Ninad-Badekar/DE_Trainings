@@ -29,7 +29,7 @@ This guide covers the core concepts of Linux architecture, basic commands, file 
 ---
 
 ## 2 Understand Linux Architecture
-
+```bash
 +----------------------------+
 | User Applications |
 +----------------------------+
@@ -42,8 +42,7 @@ This guide covers the core concepts of Linux architecture, basic commands, file 
 +----------------------------+
 | Hardware (CPU, Disk, RAM) |
 +----------------------------+
-
-bash
+```
 
 
 - **Monolithic kernel**: Linux kernel has all core components in one piece.
