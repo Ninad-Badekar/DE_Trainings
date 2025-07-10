@@ -51,7 +51,7 @@ bash
 
 ---
 
-## 3️⃣ Basic Linux Commands
+## 3 Basic Linux Commands
 
 ```bash
 pwd         # Show current directory
@@ -65,7 +65,7 @@ mv a b      # Move/rename file a to b
 cat file    # Show file content
 man ls      # Manual/help for 'ls'
 ```
-4️⃣ Linux Command Line
+## 4 Linux Command Line
 Shell: Command interpreter (e.g., Bash, Zsh)
 
 Prompt: $ for regular users, # for root
@@ -74,7 +74,7 @@ Use TAB for autocompletion and ↑/↓ to scroll command history
 
 Use Ctrl + C to cancel running process
 
-5 File System Architecture
+## 5 File System Architecture
 🔹 Key Folders in / (root):
 Directory	Purpose
 /bin	Essential user commands (ls, cp, etc.)
@@ -92,25 +92,25 @@ Directory	Purpose
 /usr	User apps, libraries
 /var	Logs, cache, spool files
 
-6 User Management & Sudo Users
-🔸 List Existing Users
+## 6 User Management & Sudo Users
+- List Existing Users
 ```bash
 cat /etc/passwd
 ```
-🔸 Create User (with home directory) using adduser
+- Create User (with home directory) using adduser
 ```bash
 sudo adduser ninad
 # Then login:
 su - ninad
 ```
-🔸 Create User using useradd
+- Create User using useradd
 ```bash
 sudo useradd -m -s /bin/bash john
 sudo passwd john
 # Then login:
 su - john
 ```
-🔸 Provide Sudo Access with Password Prompt
+- Provide Sudo Access with Password Prompt
 ```bash
 sudo usermod -aG sudo john
 # Or edit /etc/sudoers:
@@ -124,11 +124,11 @@ sudo visudo
 # Add:
 john ALL=(ALL) NOPASSWD:ALL
 ```
-🔸 Provide Sudo Using usermod
+- Provide Sudo Using usermod
 ```bash
 sudo usermod -aG sudo username
 ```
-🔸 Delete User with Home Directory
+- Delete User with Home Directory
 ```bash
 sudo deluser --remove-home john
 ```
