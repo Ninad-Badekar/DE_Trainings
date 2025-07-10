@@ -74,7 +74,7 @@ Use TAB for autocompletion and ↑/↓ to scroll command history
 
 Use Ctrl + C to cancel running process
 
-5️⃣ File System Architecture
+5 File System Architecture
 🔹 Key Folders in / (root):
 Directory	Purpose
 /bin	Essential user commands (ls, cp, etc.)
@@ -94,27 +94,24 @@ Directory	Purpose
 
 6 User Management & Sudo Users
 🔸 List Existing Users
-bash
-Copy
-Edit
+```bash
 cat /etc/passwd
+```
 🔸 Create User (with home directory) using adduser
-bash
-Copy
-Edit
+```bash
 sudo adduser ninad
 # Then login:
 su - ninad
+```
 🔸 Create User using useradd
-bash
-Copy
-Edit
+```bash
 sudo useradd -m -s /bin/bash john
 sudo passwd john
 # Then login:
 su - john
+```
 🔸 Provide Sudo Access with Password Prompt
-bash
+```bash
 sudo usermod -aG sudo john
 # Or edit /etc/sudoers:
 sudo visudo
