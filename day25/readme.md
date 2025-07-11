@@ -1,0 +1,1 @@
+- Succefully deployed FASTApi project on Docker
