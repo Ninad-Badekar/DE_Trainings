@@ -1,6 +1,6 @@
-# 🐳 Docker - Containerization Made Easy
+#  Docker - Containerization Made Easy
 
-## 📌 What is Docker?
+##  What is Docker?
 
 **Docker** is an open-source platform designed to help developers build, ship, and run applications efficiently using **containers**.
 
@@ -10,20 +10,20 @@ Unlike traditional virtual machines (VMs), containers share the host system's ke
 
 ---
 
-## 🚀 Why Docker?
+##  Why Docker?
 
 | Feature                | Description                                                                 |
 |------------------------|-----------------------------------------------------------------------------|
-| ✅ Lightweight          | Containers are smaller and faster than VMs.                                |
-| 🔄 Portable             | Run your app consistently on any environment—dev, test, or production.     |
-| 🛠 Dependency Isolation | Ensures all dependencies are packaged with the app.                        |
-| ♻️ Easy Versioning      | Docker images are version-controlled and can be rolled back.               |
-| 📦 Microservice-ready   | Great for breaking monolithic apps into microservices.                    |
-| 👨‍💻 Developer Friendly  | Easily reproducible dev environments for teams.                             |
+|  Lightweight          | Containers are smaller and faster than VMs.                                |
+|  Portable             | Run your app consistently on any environment—dev, test, or production.     |
+|  Dependency Isolation | Ensures all dependencies are packaged with the app.                        |
+|  Easy Versioning      | Docker images are version-controlled and can be rolled back.               |
+|  Microservice-ready   | Great for breaking monolithic apps into microservices.                    |
+|  Developer Friendly  | Easily reproducible dev environments for teams.                             |
 
 ---
 
-## 🧱 Core Docker Components
+##  Core Docker Components
 
 | Component      | Description |
 |----------------|-------------|
@@ -35,7 +35,7 @@ Unlike traditional virtual machines (VMs), containers share the host system's ke
 
 ---
 
-## 🛠️ Docker vs Virtual Machines
+##  Docker vs Virtual Machines
 
 | Feature             | Docker Containers                      | Virtual Machines                      |
 |---------------------|----------------------------------------|---------------------------------------|
@@ -47,7 +47,7 @@ Unlike traditional virtual machines (VMs), containers share the host system's ke
 
 ---
 
-## 📂 Dockerfile Example
+##  Dockerfile Example
 
 ```dockerfile
 # Use official Python image from Docker Hub
@@ -67,7 +67,7 @@ COPY . .
 CMD ["python", "app.py"]
 ```
 
-# 🧪 Common Docker Commands
+#  Common Docker Commands
 
 | Command                          | Description                         |
 |----------------------------------|-------------------------------------|
@@ -81,7 +81,7 @@ CMD ["python", "app.py"]
 
 ---
 
-# 📦 Docker Compose
+#  Docker Compose
 
 For multi-container applications, use `docker-compose.yml`.
 
