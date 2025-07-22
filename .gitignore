@@ -1,1 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Airflow logs and metadata
+airflow_logs/
+airflow/dags/__pycache__/
+airflow/dags/*.pyc
+
+# Spark / PySpark checkpointing and logs
+*.crc
+*.log
+*.out
+*.err
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment / dependency files
 .env
+.venv/
+env/
+venv/
+*.egg-info/
+
+# Docker-specific
+*.pid
+*.sock
+
+# VS Code / PyCharm
+.vscode/
+.idea/
+
+# Data lake and temporary data files
+data/
+data_lake/
+
+# SQL initialization files (if generated)
+mysql_init/*.sql
+postgres_init/*.sql
+
+# Build and distribution
+build/
+dist/
+*.egg
+
+# Git files
+*.orig
+
+# Ignore local requirements or override config files
+requirements-local.txt
+
+# Optional: ignore airflow config
+airflow.cfg
+unittest.cfg

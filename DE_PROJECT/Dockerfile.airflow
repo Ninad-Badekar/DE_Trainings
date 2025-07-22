@@ -1,0 +1,21 @@
+FROM apache/airflow:2.8.0
+
+USER root
+
+# Install Java (only if you want PySpark in Airflow)
+RUN apt-get update && \
+    apt-get install -y default-jdk && \
+    apt-get clean
+
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
+
+# Switch to airflow user and install Python packages
+USER airflow
+
+COPY requirements.txt /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
+
+# Add to the existing Dockerfile
+USER root
+
