@@ -33,7 +33,7 @@ def create_fact_matches(df_matches, dim_teams, dim_venues):
     t = dim_teams.alias("t")
     v = dim_venues.alias("v")
 
-    # Prepare renamed versions for join keys
+    
     t1 = t.select(col("team_id").alias("team1_id"), col("team_name").alias("team1_name"))
     t2 = t.select(col("team_id").alias("team2_id"), col("team_name").alias("team2_name"))
     tw = t.select(col("team_id").alias("toss_winner_id"), col("team_name").alias("toss_winner_name"))
@@ -74,7 +74,6 @@ def create_fact_matches(df_matches, dim_teams, dim_venues):
 from pyspark.sql.functions import when, lit
 
 def create_fact_deliveries(df_deliveries):
-    # Compute dismissal_kind_code here instead of Silver
     df = df_deliveries.withColumn(
         "dismissal_kind_code",
         when(col("dismissal_kind") == "not_out", 0)
@@ -113,11 +112,11 @@ if __name__ == "__main__":
     print(f" Silver Base: {silver_base}")
     print(f" Gold Base  : {gold_base}")
 
-    # Read silver data
+    
     df_matches = spark.read.option("recursiveFileLookup", "true").parquet(f"{silver_base}/matches")
     df_deliveries = spark.read.option("recursiveFileLookup", "true").parquet(f"{silver_base}/deliveries")
 
-    # Dimensions
+    
     dim_teams = create_dim_teams(df_matches)
     dim_venues = create_dim_venues(df_matches)
     dim_players = create_dim_players(df_deliveries)

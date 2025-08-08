@@ -41,7 +41,7 @@ def clean_deliveries(df):
 def process_to_silver(spark, bronze_path, silver_path, table):
     today = datetime.today()
     bronze_table_path = f"{bronze_path}/mysql/{table}/{today.strftime('%Y/%m/%d')}"
-    print(f"🔄 Reading from Bronze: {bronze_table_path}")
+    print(f" Reading from Bronze: {bronze_table_path}")
     df = spark.read.parquet(bronze_table_path)
 
     if table == "deliveries":
@@ -49,7 +49,7 @@ def process_to_silver(spark, bronze_path, silver_path, table):
 
     silver_table_path = os.path.join(silver_path, table, today.strftime('%Y/%m/%d'))
     df.write.mode("overwrite").parquet(silver_table_path)
-    print(f"✅ Written to Silver: {silver_table_path}")
+    print(f" Written to Silver: {silver_table_path}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
@@ -61,10 +61,10 @@ if __name__ == "__main__":
     table_name = sys.argv[3]
 
     spark = SparkSession.builder.appName("Silver Processing").getOrCreate()
-    print("🚀 Starting Silver Processing")
-    print(f"🔶 Bronze Path : {bronze_base_path}")
-    print(f"⚪ Silver Path : {silver_base_path}")
-    print(f"📦 Table       : {table_name}")
+    print(" Starting Silver Processing")
+    print(f" Bronze Path : {bronze_base_path}")
+    print(f" Silver Path : {silver_base_path}")
+    print(f" Table       : {table_name}")
 
     process_to_silver(spark, bronze_base_path, silver_base_path, table_name)
     spark.stop()
